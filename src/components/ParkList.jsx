@@ -26,7 +26,7 @@
 import React from 'react';
 
 export default function ParkList() {
-  const [data, setData] = React.useState({});
+  const [data, setData] = React.useState([]);
   React.useEffect(() => {
     const url = `https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=iemcdp722ZKWNmS5oMOwf64LiOd3fw6XSsq9tzUf`;
     fetch(url)
@@ -41,8 +41,8 @@ export default function ParkList() {
   return (
     <div>
       <h1>Park stuff yeah!</h1>
-      {data.parks ?
-        <p>{data.parks.data[0].weatherInfo}</p> :
+      {data[0] ?
+        <p>{data[0].weatherInfo}</p> :
         <p>Loading . . .</p>}
     </div>
   );
