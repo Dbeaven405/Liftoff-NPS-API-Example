@@ -41,7 +41,7 @@ export default function ParkList() {
   return (
     <div>
       <h1>Park stuff yeah!</h1>
-      <p>{parks.data[0].weatherInfor}</p>
+      <p>{parks.data[0].weatherInfo}</p>
     </div>
   );
 }
